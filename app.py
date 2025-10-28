@@ -122,7 +122,7 @@ signal.signal(signal.SIGINT, signal_handler)
 signal.signal(signal.SIGTERM, signal_handler)
 
 # Iniciar PProxy cuando se inicia la aplicación
-@app.before_first_request
+@app.before_request
 def initialize():
     print("🚀 Inicializando aplicación...")
     start_pproxy()
